@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chantique Boutique - Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadProductsPage()">
+  <header>
+    <nav class="navbar">
+      <h1>Chantique Boutique</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="product-details.html">Product Details</a></li>
+        <li><a href="cart.html">Cart (<span id="cartCount">0</span>) - RM <span id="cartTotalNav">0.00</span></a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h2>Our Products 👗</h2>
+    <p>Browse our collection by category.</p>
+  </section>
+
+  <section class="filter-section">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter" onchange="loadProductsPage()">
+      <option value="All">All</option>
+      <option value="Kurung">Kurung</option>
+      <option value="Saree">Saree</option>
+      <option value="Dress">Dress</option>
+      <option value="Accessories">Accessories</option>
+    </select>
+  </section>
+
+  <section>
+    <div id="productsContainer" class="product-grid"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Chantique Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

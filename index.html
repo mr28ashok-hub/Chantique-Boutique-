@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chantique Boutique - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadFeaturedProducts()">
+  <header>
+    <nav class="navbar">
+      <h1>Chantique Boutique</h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="product-details.html">Product Details</a></li>
+        <li><a href="cart.html">Cart (<span id="cartCount">0</span>) - RM <span id="cartTotalNav">0.00</span></a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Chantique Boutique ✨</h2>
+    <p>Discover beautiful fashion collections including kurung, saree, dresses, and accessories.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+  </section>
+
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div id="featuredProducts" class="product-grid"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Chantique Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

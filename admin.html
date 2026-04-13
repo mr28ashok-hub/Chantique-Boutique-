@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chantique Boutique - Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadAdminProducts()">
+  <header>
+    <nav class="navbar">
+      <h1>Chantique Boutique</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="product-details.html">Product Details</a></li>
+        <li><a href="cart.html">Cart (<span id="cartCount">0</span>) - RM <span id="cartTotalNav">0.00</span></a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h2>Admin Inventory Panel 📦</h2>
+  </section>
+
+  <section class="admin-section">
+    <h3>Add New Product</h3>
+    <form onsubmit="return addProduct()">
+      <input type="text" id="productName" placeholder="Product Name" />
+      <input type="text" id="productCategory" placeholder="Category" />
+      <input type="number" id="productPrice" placeholder="Price" />
+      <input type="text" id="productImage" placeholder="Image URL" />
+      <textarea id="productDescription" placeholder="Description"></textarea>
+      <input type="text" id="productSize" placeholder="Available Size" />
+      <button type="submit" class="btn">Add Product</button>
+    </form>
+    <p id="adminMessage"></p>
+  </section>
+
+  <section class="inventory-list">
+    <h3>Current Inventory</h3>
+    <div id="adminProducts"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Chantique Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

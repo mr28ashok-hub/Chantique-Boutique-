@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chantique Boutique - Cart & Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadCart()">
+  <header>
+    <nav class="navbar">
+      <h1>Chantique Boutique</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="product-details.html">Product Details</a></li>
+        <li><a href="cart.html" class="active">Cart (<span id="cartCount">0</span>) - RM <span id="cartTotalNav">0.00</span></a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h2>Your Cart 🛒</h2>
+  </section>
+
+  <section class="cart-section">
+    <div id="cartItems"></div>
+    <h3 id="cartTotal">Total: RM 0.00</h3>
+  </section>
+
+  <section class="checkout-section">
+    <h2>Checkout Form</h2>
+    <form id="checkoutForm" onsubmit="return validateCheckoutForm()">
+      <input type="text" id="customerName" placeholder="Enter your name" />
+      <input type="email" id="customerEmail" placeholder="Enter your email" />
+      <textarea id="customerAddress" placeholder="Enter your address"></textarea>
+      <input type="text" id="paymentInfo" placeholder="Enter payment reference" />
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Chantique Boutique. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

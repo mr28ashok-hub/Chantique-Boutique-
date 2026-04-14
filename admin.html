@@ -30,9 +30,11 @@
       <input type="text" id="productName" placeholder="Product Name" />
       <input type="text" id="productCategory" placeholder="Category" />
       <input type="number" id="productPrice" placeholder="Price" />
-      <input type="text" id="productImage" placeholder="Image URL" />
+      <label class="file-label" for="productImageFile">Upload Product Image</label>
+      <input type="file" id="productImageFile" accept="image/*" />
       <textarea id="productDescription" placeholder="Description"></textarea>
       <input type="text" id="productSize" placeholder="Available Size" />
+      <input type="number" id="productStock" placeholder="Stock Quantity" min="0" />
       <button type="submit" class="btn">Add Product</button>
     </form>
     <p id="adminMessage"></p>
